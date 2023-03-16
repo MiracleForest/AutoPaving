@@ -6,7 +6,7 @@
 
 void PluginInit();
 
-Logger logger(PLUGIN_NAME);
+Logger logger("MiF-AutoPaving");
 
 void CheckProtocolVersion()
 {
