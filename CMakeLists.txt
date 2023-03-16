@@ -14,6 +14,10 @@ file(GLOB_RECURSE SRC_FILES_DIR
     ${PROJECT_SOURCE_DIR}/src/tools/*.hpp
     ${PROJECT_SOURCE_DIR}/src/tools/*.c
     ${PROJECT_SOURCE_DIR}/src/tools/*.cpp
+    ${PROJECT_SOURCE_DIR}/src/paving/*.h
+    ${PROJECT_SOURCE_DIR}/src/paving/*.hpp
+    ${PROJECT_SOURCE_DIR}/src/paving/*.c
+    ${PROJECT_SOURCE_DIR}/src/paving/*.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/SDK/include)

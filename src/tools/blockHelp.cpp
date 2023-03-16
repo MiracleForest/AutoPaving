@@ -17,6 +17,7 @@ istring BlockHelp::getBlockType(float x, float y, float z, int dimensionId, istr
 		return ifNullDefault;
 	}
 }
+
 bool BlockHelp::placeBlock(istring blockTypeName, float x, float y, float z, int dimensionId, unsigned short tileData, bool replace)
 {
 	if (replace)
