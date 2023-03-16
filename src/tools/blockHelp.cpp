@@ -34,7 +34,7 @@ bool BlockHelp::placeBlock(istring blockTypeName, float x, float y, float z, int
 	return false;
 }
 
-json BlockHelp::getBlockJson(float x, float y, float z, int dimensionId, json ifNullDefault)
+json BlockHelp::getBlockJson(float x, float y, float z, json ifNullDefault, int dimensionId)
 {
 	auto block = Level::getBlock(BlockPos(x, y, z), dimensionId);
 	if (block)
@@ -58,7 +58,7 @@ json BlockHelp::getBlockJson(float x, float y, float z, int dimensionId, json if
 
 json BlockHelp::getBlockJson(float x, float y, float z, int dimensionId)
 {
-	return getBlockJson(x, y, z, dimensionId,
+	return getBlockJson(x, y, z,
 		{
 			{"type",""},
 			{"x",x},
@@ -66,7 +66,8 @@ json BlockHelp::getBlockJson(float x, float y, float z, int dimensionId)
 			{"z",z},
 			{"dimensionId",dimensionId},
 			{"tile",0}
-		}
+		},
+		dimensionId
 	);
 }
 

@@ -52,10 +52,10 @@ public:
 	/// <param name="x">指定维度的x坐标</param>
 	/// <param name="y">指定维度的y坐标</param>
 	/// <param name="z">指定维度的z坐标</param>
-	/// <param name="dimensionId">维度id，0是主世界</param>
 	/// <param name="ifNullDefault">不存在方块时的默认Json</param>
+	/// <param name="dimensionId">维度id，0是主世界</param>
 	/// <returns>有方块返回Json，没有方块返回默认Json</returns>
-	static json getBlockJson(float x, float y, float z, int dimensionId = 0, json ifNullDefault);
+	static json getBlockJson(float x, float y, float z, json ifNullDefault, int dimensionId = 0);
 
 	/// <summary>
 	/// 获取指定维度坐标的方块json数据
