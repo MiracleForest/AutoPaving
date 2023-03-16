@@ -8,12 +8,12 @@ set(CMAKE_BUILD_TYPE Release)
 file(GLOB_RECURSE SRC_FILES_DIR
     ${PROJECT_SOURCE_DIR}/src/*.c
     ${PROJECT_SOURCE_DIR}/src/*.cpp
-    ${PROJECT_SOURCE_DIR}/src/*.h
+    ${PROJECT_SOURCE_DIR}/src/header/*.h
 )
 
-include_directories(
-    ${CMAKE_SOURCE_DIR}/SDK/include
-)
+include_directories(${CMAKE_SOURCE_DIR}/SDK/include)
+include_directories(${CMAKE_SOURCE_DIR}/MiF/ibasicLibrary/include)
+include_directories(${CMAKE_SOURCE_DIR}/third-party/)
 
 link_directories(
     ${CMAKE_SOURCE_DIR}/SDK/lib

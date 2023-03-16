@@ -1,12 +1,7 @@
-/**
- * @file DLLMain.cpp
- * @note DO NOT modify or remove this file!
- */
-
 #include <llapi/LoggerAPI.h>
 #include <llapi/ServerAPI.h>
 
-#include "version.h"
+#include "header/version.h"
 
 void PluginInit();
 
