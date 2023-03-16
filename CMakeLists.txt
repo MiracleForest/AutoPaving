@@ -43,8 +43,7 @@ add_compile_options(
     /nologo
     /permissive-
     /sdl
-    /source-charset:utf-8
-    /execution-charset:GBK 
+    /utf-8
     /Zc:inline
     /Zi
 )
