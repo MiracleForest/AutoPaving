@@ -1,0 +1,28 @@
+/**
+ * @file  PathFinderHackUtils.hpp
+ *
+ */
+#pragma once
+#define AUTO_GENERATED
+#include "llapi/Global.h"
+
+#define BEFORE_EXTRA
+
+#undef BEFORE_EXTRA
+
+/**
+ * @brief MC namespace PathFinderHackUtils.
+ *
+ */
+namespace PathFinderHackUtils {
+
+#define AFTER_EXTRA
+
+#undef AFTER_EXTRA
+    /**
+     * @hash   -1224480662
+     * @symbol  ?canUseFreeStartNodeCheck\@PathFinderHackUtils\@\@YA_NW4ActorType\@\@\@Z
+     */
+    MCAPI bool canUseFreeStartNodeCheck(enum class ActorType);
+
+};

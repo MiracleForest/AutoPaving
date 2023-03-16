@@ -1,0 +1,41 @@
+/**
+ * @file  StorePreviousRideStatsSystem.hpp
+ *
+ */
+#pragma once
+#define AUTO_GENERATED
+#include "llapi/Global.h"
+
+#define BEFORE_EXTRA
+
+#undef BEFORE_EXTRA
+
+/**
+ * @brief MC class StorePreviousRideStatsSystem.
+ *
+ */
+class StorePreviousRideStatsSystem {
+
+#define AFTER_EXTRA
+
+#undef AFTER_EXTRA
+#ifndef DISABLE_CONSTRUCTOR_PREVENTION_STOREPREVIOUSRIDESTATSSYSTEM
+public:
+    class StorePreviousRideStatsSystem& operator=(class StorePreviousRideStatsSystem const &) = delete;
+    StorePreviousRideStatsSystem(class StorePreviousRideStatsSystem const &) = delete;
+    StorePreviousRideStatsSystem() = delete;
+#endif
+
+public:
+    /**
+     * @hash   -1537515228
+     * @symbol  ?_storePreviousRideStats\@StorePreviousRideStatsSystem\@\@SAXAEBVStrictEntityContext\@\@AEBUStateVectorComponent\@\@AEAUVanillaClientGameplayComponent\@\@\@Z
+     */
+    MCAPI static void _storePreviousRideStats(class StrictEntityContext const &, struct StateVectorComponent const &, struct VanillaClientGameplayComponent &);
+    /**
+     * @hash   735362454
+     * @symbol  ?createSystem\@StorePreviousRideStatsSystem\@\@SA?AUTickingSystemWithInfo\@\@XZ
+     */
+    MCAPI static struct TickingSystemWithInfo createSystem();
+
+};

@@ -1,0 +1,28 @@
+/**
+ * @file  LocateCommandUtil.hpp
+ *
+ */
+#pragma once
+#define AUTO_GENERATED
+#include "llapi/Global.h"
+
+#define BEFORE_EXTRA
+
+#undef BEFORE_EXTRA
+
+/**
+ * @brief MC namespace LocateCommandUtil.
+ *
+ */
+namespace LocateCommandUtil {
+
+#define AFTER_EXTRA
+
+#undef AFTER_EXTRA
+    /**
+     * @hash   1866759936
+     * @symbol  ?locateNearbyBiome\@LocateCommandUtil\@\@YA?AV?$optional\@VBlockPos\@\@\@std\@\@VBlockPos\@\@PEAVDimension\@\@W4Biomes\@1\@\@Z
+     */
+    MCAPI class std::optional<class BlockPos> locateNearbyBiome(class BlockPos, class Dimension *, enum class LocateCommandUtil::Biomes);
+
+};
