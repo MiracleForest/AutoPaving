@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.21)
 
-project(plugin)
+project(autoPaving)
 
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_BUILD_TYPE Release)
@@ -10,6 +10,10 @@ file(GLOB_RECURSE SRC_FILES_DIR
     ${PROJECT_SOURCE_DIR}/src/*.cpp
     ${PROJECT_SOURCE_DIR}/src/header/*.h
     ${PROJECT_SOURCE_DIR}/src/header/*.hpp
+    ${PROJECT_SOURCE_DIR}/src/tools/*.h
+    ${PROJECT_SOURCE_DIR}/src/tools/*.hpp
+    ${PROJECT_SOURCE_DIR}/src/tools/*.c
+    ${PROJECT_SOURCE_DIR}/src/tools/*.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/SDK/include)
