@@ -9,6 +9,7 @@ file(GLOB_RECURSE SRC_FILES_DIR
     ${PROJECT_SOURCE_DIR}/src/*.c
     ${PROJECT_SOURCE_DIR}/src/*.cpp
     ${PROJECT_SOURCE_DIR}/src/header/*.h
+    ${PROJECT_SOURCE_DIR}/src/header/*.hpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/SDK/include)

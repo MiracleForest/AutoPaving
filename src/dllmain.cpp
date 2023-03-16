@@ -2,6 +2,7 @@
 #include <llapi/ServerAPI.h>
 
 #include "header/version.h"
+#include "header/globalVars.hpp"
 
 void PluginInit();
 
