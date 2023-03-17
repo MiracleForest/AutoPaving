@@ -1,7 +1,7 @@
 #include <llapi/LoggerAPI.h>
 
-#include "header/version.h"
-#include "header/globalVars.hpp"
+#include "other/version.h"
+#include "other/globalVars.hpp"
 
 extern Logger logger;
 
