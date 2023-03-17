@@ -1,4 +1,4 @@
 #pragma once
-#include "config.h"
+#include "../config/config.h"
 
 inline config globalConfig("config.json");

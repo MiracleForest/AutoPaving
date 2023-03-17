@@ -6,18 +6,25 @@ set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_BUILD_TYPE Release)
 
 file(GLOB_RECURSE SRC_FILES_DIR
-    ${PROJECT_SOURCE_DIR}/src/*.c
+    ${PROJECT_SOURCE_DIR}/src/*.h
     ${PROJECT_SOURCE_DIR}/src/*.cpp
-    ${PROJECT_SOURCE_DIR}/src/header/*.h
-    ${PROJECT_SOURCE_DIR}/src/header/*.hpp
+    ${PROJECT_SOURCE_DIR}/src/*.hpp
+
+    ${PROJECT_SOURCE_DIR}/src/other/*.h
+    ${PROJECT_SOURCE_DIR}/src/other/*.hpp
+    ${PROJECT_SOURCE_DIR}/src/other/*.cpp
+
     ${PROJECT_SOURCE_DIR}/src/tools/*.h
     ${PROJECT_SOURCE_DIR}/src/tools/*.hpp
-    ${PROJECT_SOURCE_DIR}/src/tools/*.c
     ${PROJECT_SOURCE_DIR}/src/tools/*.cpp
+
     ${PROJECT_SOURCE_DIR}/src/paving/*.h
     ${PROJECT_SOURCE_DIR}/src/paving/*.hpp
-    ${PROJECT_SOURCE_DIR}/src/paving/*.c
     ${PROJECT_SOURCE_DIR}/src/paving/*.cpp
+
+    ${PROJECT_SOURCE_DIR}/src/config/*.h
+    ${PROJECT_SOURCE_DIR}/src/config/*.hpp
+    ${PROJECT_SOURCE_DIR}/src/config/*.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/SDK/include)

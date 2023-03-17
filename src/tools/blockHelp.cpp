@@ -1,11 +1,21 @@
 #include "blockHelp.h"
-// 方块帮助类实现
-bool BlockHelp::hasBlock(float x, float y, float z, int dimensionId)
+using json = nlohmann::json;
+using istring = _ISTD data::text::istring;
+
+
+BlockHelper::BlockHelper()
+{ }
+
+BlockHelper::~BlockHelper()
+{ }
+
+
+bool BlockHelper::hasBlock(float x, float y, float z, int dimensionId)
 {
 	return !!Level::getBlock(BlockPos(x, y, z), dimensionId);
 }
 
-istring BlockHelp::getBlockType(float x, float y, float z, int dimensionId, istring ifNullDefault)
+istring BlockHelper::getBlockType(float x, float y, float z, int dimensionId, istring ifNullDefault)
 {
 	auto block = Level::getBlock(BlockPos(x, y, z), dimensionId);
 	if (block)
@@ -18,7 +28,7 @@ istring BlockHelp::getBlockType(float x, float y, float z, int dimensionId, istr
 	}
 }
 
-bool BlockHelp::placeBlock(istring blockTypeName, float x, float y, float z, int dimensionId, unsigned short tileData, bool replace)
+bool BlockHelper::placeBlock(istring blockTypeName, float x, float y, float z, int dimensionId, unsigned short tileData, bool replace)
 {
 	if (replace)
 	{
@@ -34,7 +44,7 @@ bool BlockHelp::placeBlock(istring blockTypeName, float x, float y, float z, int
 	return false;
 }
 
-json BlockHelp::getBlockJson(float x, float y, float z, json ifNullDefault, int dimensionId)
+json BlockHelper::getBlockJson(float x, float y, float z, json ifNullDefault, int dimensionId)
 {
 	auto block = Level::getBlock(BlockPos(x, y, z), dimensionId);
 	if (block)
@@ -56,7 +66,7 @@ json BlockHelp::getBlockJson(float x, float y, float z, json ifNullDefault, int 
 
 }
 
-json BlockHelp::getBlockJson(float x, float y, float z, int dimensionId)
+json BlockHelper::getBlockJson(float x, float y, float z, int dimensionId)
 {
 	return getBlockJson(x, y, z,
 		{
@@ -71,7 +81,7 @@ json BlockHelp::getBlockJson(float x, float y, float z, int dimensionId)
 	);
 }
 
-bool BlockHelp::loadBlockJson(json blockJson)
+bool BlockHelper::loadBlockJson(json blockJson)
 {
 	auto type = blockJson["type"].get<std::string>();
 	if (type != "")
@@ -90,10 +100,3 @@ bool BlockHelp::loadBlockJson(json blockJson)
 	}
 }
 
-BlockHelp::BlockHelp()
-{
-}
-
-BlockHelp::~BlockHelp()
-{
-}

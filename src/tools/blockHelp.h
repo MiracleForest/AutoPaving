@@ -5,12 +5,19 @@
 #include <llapi/mc/BlockPos.hpp>
 #include <llapi/mc/Block.hpp>
 #include <nlohmann/json.hpp>
-using json = nlohmann::json;
-using istring = _ISTD data::text::istring;
-class BlockHelp
+
+
+class BlockHelper
 {
+	using json = nlohmann::json;
+	using istring = _ISTD data::text::istring;
 public:
-	~BlockHelp();
+
+	BlockHelper();
+
+	~BlockHelper();
+
+public:
 
 	/// <summary>
 	/// 判断指定维度的坐标是否存在方块
@@ -73,9 +80,6 @@ public:
 	/// <param name="blockJson">方块Json</param>
 	/// <returns>放置成功返回true，否则为false</returns>
 	static bool loadBlockJson(json blockJson);
+
 private:
-	/// <summary>
-	/// 没有构造的必要，作为静态类
-	/// </summary>
-	BlockHelp();
 };

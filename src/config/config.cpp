@@ -1,5 +1,5 @@
-#include "header/globalVars.hpp"
-#include "header/config.h"
+#include "../other/globalVars.hpp"
+#include "../config/config.h"
 
 extern Logger logger;
 

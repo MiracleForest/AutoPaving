@@ -1,8 +1,8 @@
 #include <llapi/LoggerAPI.h>
 #include <llapi/ServerAPI.h>
 
-#include "header/version.h"
-#include "header/globalVars.hpp"
+#include "other/version.h"
+#include "other/globalVars.hpp"
 
 void PluginInit();
 
