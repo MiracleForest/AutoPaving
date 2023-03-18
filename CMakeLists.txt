@@ -25,6 +25,10 @@ file(GLOB_RECURSE SRC_FILES_DIR
     ${PROJECT_SOURCE_DIR}/src/config/*.h
     ${PROJECT_SOURCE_DIR}/src/config/*.hpp
     ${PROJECT_SOURCE_DIR}/src/config/*.cpp
+
+    ${PROJECT_SOURCE_DIR}/src/data/block/*.h
+    ${PROJECT_SOURCE_DIR}/src/data/block/*.hpp
+    ${PROJECT_SOURCE_DIR}/src/data/block/*.cpp
 )
 
 include_directories(${CMAKE_SOURCE_DIR}/SDK/include)
