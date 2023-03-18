@@ -1,4 +1,5 @@
 #include "structureComposition.h"
+#include "../../tools/blockHelp.h"
 
 StructureComposition::StructureComposition(istring name)
 	:_name(name), _startPosition(Vec3()), _endPosition(Vec3()), _dimensionId(0)
@@ -29,8 +30,16 @@ StructureComposition::~StructureComposition()
 {
 }
 
+bool addBlockJson(float x, float y, float z)
+{
+	return true;
+}
+
 int StructureComposition::load() const
 {
+	BlockHelper::eachBlock(_startPosition.x, _startPosition.y, _startPosition.z, _endPosition.x, _endPosition.y, _endPosition.z, [](float x, float y, float z) {
+		return true;
+		});
 	return 0;
 }
 

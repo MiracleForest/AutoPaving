@@ -1,4 +1,7 @@
 #include "blockHelp.h"
+#include <llapi/mc/Level.hpp>
+#include <llapi/mc/BlockPos.hpp>
+#include <llapi/mc/Block.hpp>
 using json = nlohmann::json;
 using istring = _ISTD data::text::istring;
 
@@ -51,12 +54,13 @@ json BlockHelper::getBlockJson(float x, float y, float z, json ifNullDefault, in
 	{
 		return
 		{
-			{"type",block->getTypeName()},
-			{"x",x},
-			{"y",y},
-			{"z",z},
-			{"dimensionId",dimensionId},
-			{"tile",block->getTileData()}
+			{"type", block->getTypeName()},
+			{"x", x},
+			{"y", y},
+			{"z", z},
+			{"dimensionId", dimensionId},
+			{"tile", block->getTileData()},
+			{"nbt", block->getNbt()->toPrettySNBT()}
 		};
 	}
 	else
@@ -100,3 +104,20 @@ bool BlockHelper::loadBlockJson(json blockJson)
 	}
 }
 
+void BlockHelper::eachBlock(float startX, float startY, float startZ, float endX, float endY, float endZ, bool(*checkIsSaftBlock)(float x, float y, float z))
+{
+	bool keepOn = true;
+	int xDirection = endX >= startX ? 1 : -1;
+	int yDirection = endY >= startY ? 1 : -1;
+	int zDirection = endZ >= startZ ? 1 : -1;
+	for (float i = 0; i < abs(endX - startX) && keepOn; i++)
+	{
+		for (float j = 0; j < abs(endY - startY) && keepOn; j++)
+		{
+			for (float k = 0; k < abs(endZ - startZ) && keepOn; k++)
+			{
+				keepOn = checkIsSaftBlock(startX + i * xDirection, startY + i * yDirection, startZ + i * zDirection);
+			}
+		}
+	}
+}

@@ -3,10 +3,12 @@
 #include <icore/data/text/istring.hpp>
 #include <llapi/mc/Vec3.hpp>
 #include <llapi/mc/Block.hpp>
+#include <nlohmann/json.hpp>
 
 class StructureComposition
 {
 	using istring = _ISTD data::text::istring;
+	using json = nlohmann::json;
 public:
 
 	StructureComposition(istring name);
@@ -23,7 +25,7 @@ public:
 
 public:
 
-	int load()const;
+	int load() const;
 
 	bool save2file(istring fileName) const;
 
@@ -72,4 +74,5 @@ private:
 	vector<Block*> _excludeBlockList;
 	vector<istring> _excludeBlockTypeNameList;
 	vector<Block*> _selectedBlockList;
+	json _loadedBlockJson = json::array();
 };

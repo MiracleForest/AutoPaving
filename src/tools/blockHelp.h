@@ -1,9 +1,6 @@
 #pragma once
 #include <icore/family/imacrofamily.h>
 #include <icore/data/text/istring.hpp>
-#include <llapi/mc/Level.hpp>
-#include <llapi/mc/BlockPos.hpp>
-#include <llapi/mc/Block.hpp>
 #include <nlohmann/json.hpp>
 
 
@@ -80,6 +77,8 @@ public:
 	/// <param name="blockJson">方块Json</param>
 	/// <returns>放置成功返回true，否则为false</returns>
 	static bool loadBlockJson(json blockJson);
+
+	static void eachBlock(float startX, float startY, float startZ, float endX, float endY, float endZ, bool(* checkIsSaftBlock)(float x,float y,float z));
 
 private:
 };
